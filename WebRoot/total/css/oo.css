@@ -1,0 +1,70 @@
+.clear {
+	clear: both;
+	height: 10px;
+	overflow: hidden;
+}
+/*初始化*/
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,legend,input,img
+	{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #4b2e1e;
+	line-height: 30px;
+	background: #8fd7e4 url(../img/login_bg.jpg) repeat-x 0 -200px;
+	font-weight: 800;
+}
+
+border,img {
+	border: 0 none;
+}
+
+ul {
+	list-style: none;
+}
+
+em {
+	font-style: normal;
+}
+
+a:link {
+	text-decoration: none;
+	color: #302518;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #302518;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #ff6501;
+}
+/*初始化结束*/
+/*清除浮动及IE相关问题*/
+#warp {
+	width: 414px;
+	height: 210px;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+
+#logo {
+	width: 414px;
+	height: 97px;
+	border: 0px solid #ccc;
+}
+
+#login {
+	width: 174px;
+	margin: 0 auto;
+	height: 100px;
+	padding-top: 41px;
+	
+}
+#logo img{margin-left:90px;}

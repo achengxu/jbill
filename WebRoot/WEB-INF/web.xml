@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Auto</servlet-name>
+		<servlet-class>bill.init.BillConfig</servlet-class>
+		<init-param>
+			<param-name>jdbc.url</param-name>
+			<param-value>jdbc:mysql://127.0.0.1:3306/jbill?characterEncoding=UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jdbc.userName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jdbc.password</param-name>
+			<param-value></param-value>
+		</init-param>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Auto</servlet-name>
+		<url-pattern>/Auto</url-pattern>
+	</servlet-mapping>
+</web-app>
