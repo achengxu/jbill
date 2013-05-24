@@ -20,7 +20,7 @@
 	#listBill{margin-left:40px;}
 </style>
 <script language="javascript" type="text/javascript" src="dp/WdatePicker.js"></script>
-<script language="javascript" type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script language="javascript" type="text/javascript" src="js/billadd.js"></script>
 <script type="text/javascript">
 $(function(){

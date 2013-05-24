@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </style>
 <link href="images/jquery-webox.css" rel="stylesheet" type="text/css" />
 <link href="css/common.css" rel="stylesheet" type="text/css" />
-<script language="javascript" type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery-webox.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){

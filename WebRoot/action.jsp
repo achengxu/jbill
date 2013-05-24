@@ -2,8 +2,6 @@
 <%@page import="org.json.JSONObject,bill.db.JDBServer,bill.bean.*"%>
 <%
 	response.setCharacterEncoding("utf-8");
-%>
-<%
 	request.setCharacterEncoding("utf-8");
 %>
 <%

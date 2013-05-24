@@ -51,7 +51,7 @@
         <div id="wrapper">
 
             <div id="header">
-                <div class="back-to-home"><a href="../index.html">exit</a></div>
+                <div class="back-to-home"><a href="../list.jsp">back</a></div>
 
                 <div class="logo"><a class="imagelink"  href="#" >
                 <img src="${assetImagePath}fusionchartsv3.2-logo.png" width="131" height="75" alt="jbill" /></a></div>

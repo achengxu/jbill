@@ -10,7 +10,7 @@ if(null==session.getAttribute("userId")){
 }
 int userId = (Integer)session.getAttribute("userId");
     String filename = new String(("账单").getBytes("utf-8"),"ISO-8859-1"); 
-    response.addHeader("Content-Disposition", "filename=" + filename + ".xls");
+    response.addHeader("Content-Disposition", "filename=" + filename +bill.util.JDate.getDateInt()+ ".xls");
 %>
 <html>
 <head>
