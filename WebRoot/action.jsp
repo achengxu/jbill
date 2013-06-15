@@ -54,7 +54,7 @@
 
 	String delKey = request.getParameter("delKey");
 	String userId = request.getParameter("userId");
-	if (null != delKey) {
+	if (null != delKey&&null!=userId) {
 		boolean flag = JDBServer.getInstance().delKey(
 				Integer.parseInt(userId), Long.valueOf(delKey));
 		if (flag) {
@@ -70,4 +70,27 @@
 		out.print(1 + "<br/>" + "</p>hello<p>");
 		return;
 	}
+	
+	String check = request.getParameter("check");
+	if(null!=check){
+		if(JDBServer.getInstance().existsUser(check)){
+			out.println(2);
+		}else{
+			out.println(1);
+		}
+		return;	
+	}
+	
+	String reg = request.getParameter("reg");
+	if(null!=reg){
+		int uid = JDBServer.getInstance().regUser(reg);
+		if(uid!=-1){
+			session.setAttribute("userId", uid);
+			out.print("note.jsp");
+		}else{
+			out.println(2);
+		}
+		return;	
+	}
+	
 %>

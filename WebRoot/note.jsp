@@ -2,7 +2,7 @@
 <%
 	if(null==session.getAttribute("userId")){
 		response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
-		String newLocn = "./index.html";
+		String newLocn = "./index.jsp";
 		response.setHeader("Location",newLocn);
 		return ;
 	}
@@ -20,9 +20,29 @@
 	#listBill{margin-left:40px;}
 </style>
 <script language="javascript" type="text/javascript" src="dp/WdatePicker.js"></script>
-<script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
 <script language="javascript" type="text/javascript" src="js/billadd.js"></script>
 <script type="text/javascript">
+ 
+        function getToDay(){
+             var now = new Date();
+             var nowYear = now.getFullYear();
+             var nowMonth = now.getMonth();
+             var nowDate = now.getDate();
+             newdate = new Date(nowYear,nowMonth,nowDate);
+             nowMonth = doHandleMonth(nowMonth + 1);
+             nowDate = doHandleMonth(nowDate);
+             return nowYear+"-"+nowMonth+"-"+nowDate;
+        }
+       
+        //----修改日期格式填充零
+        function doHandleMonth(month){
+             if(month.toString().length == 1){
+              month = "0" + month;
+             }
+             return month;
+        }
+
 $(function(){
 //文本框只能输入数字，并屏蔽输入法和粘贴
  $.fn.numeral = function() {   
@@ -70,7 +90,7 @@ $(function(){
 	<ul>
 		<li><span id="msg"></span></li>
 		<li>项目:<input type="text" name="billSubject" id="billSubject" /></li>
-		<li>时间:<input type="text" name="billTime" class="Wdate" onclick="WdatePicker()"/></li>
+		<li>时间:<input type="text" name="billTime" id="billTime" class="Wdate"  onclick="WdatePicker({maxDate:'%y-%M-%d'})" value="<%=bill.util.JDate.toInfo()%>"/></li>
 		<li>支出:<input type="radio" name="billType" value="1" checked="checked"/>收入:<input type="radio" name="billType" value="2"/></li>	
 		<li>金额:<input type="text" name="billMoney" id="billMoney" /></li>
 		<li>明细:<textarea rows="4" cols="20" name="billDetial"></textarea></li>

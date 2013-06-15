@@ -13,7 +13,7 @@
 <%
 	if (null == session.getAttribute("userId")) {
 		response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
-		String newLocn = "../index.html";
+		String newLocn = "../index.jsp";
 		response.setHeader("Location", newLocn);
 		return;
 	}

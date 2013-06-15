@@ -37,6 +37,7 @@ function logins() {
 		url : 'action.jsp',
 		data : "login=" + _send,
 		beforeSend : function(XMLHttpRequest) {
+			
 		},
 		success : function(data, textStatus) {
 			if (data == 0) {
